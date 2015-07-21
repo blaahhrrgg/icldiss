@@ -26,7 +26,7 @@ Download the files and compile the LaTeX document in the usual fashion, i.e. som
 
 should do the trick. Using something like [latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) should make it easier though.
 
-Once compiled, examine the resulting document and then start typing/editing away. 
+Once compiled you can examine the document and then start  can then examine the 
 
 ## Tips
 
