@@ -20,8 +20,11 @@ This is by no means a complete template and you may wish to edit some of the opt
 Download the files and compile the LaTeX document in the usual fashion, i.e. something along the lines of
 
 `pdflatex icldiss.tex`
+
 `bibtex icldiss.aux`
+
 `pdflatex icldiss.tex`
+
 `pdflatex icldiss.tex`
 
 should do the trick. Using something like [latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) should make it easier though.
