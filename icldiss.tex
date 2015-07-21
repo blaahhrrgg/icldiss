@@ -1,0 +1,185 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% IMPERIAL COLLEGE LONDON DISSERTATION TEMPLATE 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This file is `icldiss.tex'
+%
+% This document fulfills the layout requirements for Dissertations
+% of Imperial College London (circa 2015). To do so it uses the 
+% documentclass `icldt' which is provided free of charge under the 
+% MIT license. 
+%
+% This is a modified and updated version of numerous other templates
+% I have found on the internet. Most notably the template `icldt' 
+% created by Daniel Wagner (www.PrettyPrinting.net) circa 2008 provided
+% free of charge under a MIT license and the template `ICMathsThesis'
+% template provided by Nigel Lawrence et. al. on the Department of
+% Mathematics website. The bibliography style file `jfm2.bst' by
+% Stefan Llewellyn Smith is also included to make a nice looking,
+% Journal of Fluids Mechanics style, bibliography.
+%
+% This version arose from some changes in the layout requirements and
+% my desire to change certain aesthetic elements. Some changes include:
+%
+% 	- changed layout of title page and use of smallcaps (\sc)
+%	- use of the package fancyhdr to add header and footer
+%	- alteration of some package options
+%	- using the jfm2.bst to style the bibliography
+%
+% If you print your dissertation for yourself or as a present for
+% family, friends or colleagues you probably should use a different
+% layout which does not fulfill the College requirements but which
+% can look much better.
+%
+% Copyright (c) 2015, Joseph Maestri.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{icldt}
+
+% Import some useful packages
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[bf,labelsep=space]{caption}
+\usepackage[singlelinecheck=off]{subcaption}
+%\usepackage{verbatim}
+\usepackage{todonotes}
+\usepackage{mathrsfs}
+\usepackage[linktoc=page]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{pgfplots} 
+\usepackage[nottoc]{tocbibind}
+
+\captionsetup{format=plain}
+
+\pagestyle{fancy}
+\fancyhead{}
+\lhead{\nouppercase{\leftmark}}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\thepage}
+
+{\providecommand{\noopsort}[1]{}
+
+\usepackage[sort]{natbib}
+
+\newlength\figureheight 
+\newlength\figurewidth 
+\setlength\figureheight{7cm} 
+\setlength\figurewidth{10cm}
+
+% The title of the thesis
+\title{This is a title}
+% The author of the thesis
+\author{Your name}
+% The date you submit the thesis
+\date{The date}
+% The department
+\department{The department}
+% The name of the supervisor
+\supervisor{Your Supervisor's name}
+% Statement of originality
+\declareoriginality{I certify that this thesis, and the research to which it refers, are the product of my own work, and that any ideas or quotations from the work of other people, published or otherwise, are fully acknowledged in accordance with the standard referencing practices of the discipline.}
+% Statement of copyright
+\declarecopyright{The copyright of this thesis rests with the author and is made available under a Creative Commons Attribution Non-Commercial No Derivatives licence. Researchers are free to copy, distribute or transmit the thesis on the condition that they attribute it, that they do not use it for commercial purposes and that they do not alter, transform or build upon it. For any reuse or redistribution, researchers must make clear to others the licence terms of this work.}
+
+% Acknowledgements
+\acknowledgements{You can make your acknowledgements here.}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONT MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+\makedeclaration
+\makecopyright
+\makeacknowledgements
+
+\begin{abstract}
+The abstract should be no longer than 300 words.
+\end{abstract}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+This is an example of a citation. \citet{taylor1923stability} is a very nice paper.
+
+Figure \ref{fig:reynolds_experiment} is a very nice illustration of the experiments of transition in turbulence in a pipe conducted by \citet{Reynolds1883}.
+
+Table \ref{tab:example} is an example of what a table could look like.
+
+
+\begin{figure}[]
+\centering
+\includegraphics[width=0.9\textwidth]{ReynoldsExperiment.eps}
+\caption{Cartoon of the experiment of \citet{Reynolds1883} on the transition of turbulence in a pipe. Water flows down a long pipe and ink is introduced at the centerline. On the right are three drawings showing a) the dye filament in laminar flow, b) the rapid mixing of the dye and the water when the Reynolds number is larger than 2000 and c) details the vortical structures present in the turbulent flow, visualised with a spark.}
+\label{fig:reynolds_experiment}
+\end{figure}
+
+\begin{table}[hp]
+\centering
+\hrule \vspace{0.5em}
+\begin{tabular}{cccccc}
+$\alpha$ & 1 & 2 & 3 & 4 & 5 \\
+$\beta$ & 1 & 4 & 9 & 16 & 25 \\
+\end{tabular}
+\caption{This is a table of numbers to demonstrate what a table of values could look like.}
+\vspace{0.5em} \hrule
+\label{tab:example}
+\end{table}
+
+\section{This is a section}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis nisl sed fermentum euismod. Cras at leo ipsum. Nullam congue orci quis rutrum eleifend. Vivamus accumsan convallis ipsum, vitae mollis arcu scelerisque sit amet. Nunc at dignissim tellus. Sed eu sem non quam viverra tincidunt vehicula vel tortor. Maecenas sed tempor mi. Praesent egestas vulputate posuere. Praesent auctor nisl vel ligula iaculis pulvinar. Duis consectetur ante nec aliquet hendrerit.
+
+Pellentesque efficitur ante vitae quam luctus, at euismod leo dictum. Nam nisl ante, fermentum auctor eros a, condimentum fermentum ipsum. Vestibulum aliquam nisi dui, a laoreet eros condimentum vel. Ut sodales, sapien sed posuere tristique, urna lorem mollis tellus, in malesuada diam ipsum at libero. Donec at risus non velit cursus blandit nec sit amet ex. Cras sodales ultricies sapien nec iaculis. Ut tristique, enim eget vulputate feugiat, nisl turpis aliquam mauris, id efficitur velit nisl et eros.
+
+Integer egestas ante mauris, sed pellentesque odio congue sit amet. Pellentesque lacinia elit nec sem aliquet efficitur. Duis lacinia, tortor ac molestie molestie, tortor libero pretium justo, at semper ligula ex et risus. Aliquam quis diam non ligula fermentum posuere. Integer quam quam, iaculis sit amet justo quis, consequat hendrerit diam. Aliquam venenatis leo tellus, sagittis semper est ultrices rhoncus. Nulla semper cursus est, eu lacinia metus cursus gravida.
+
+Etiam maximus pretium elit, a hendrerit justo hendrerit quis. In hac habitasse platea dictumst. Sed semper erat id leo porttitor, sit amet venenatis felis porttitor. Etiam semper diam mauris, vitae ultrices est venenatis ac. Nam mollis scelerisque purus quis congue. Integer accumsan euismod felis, eu feugiat dolor pellentesque eget. Phasellus sagittis odio vitae libero molestie venenatis. Aliquam rhoncus tortor eu leo dapibus, id vestibulum ligula feugiat. Vestibulum sit amet dapibus mi. Sed ac purus posuere, rutrum dui non, congue orci.
+
+\subsection{This is a subsection}
+
+Proin bibendum sem nisi, at finibus lacus ullamcorper sed. Quisque efficitur erat tellus. Sed ornare ut metus in aliquet. Nullam fringilla vehicula ligula nec feugiat. Ut placerat ac arcu eu vestibulum. Cras ornare magna ut purus pharetra, in dignissim dui suscipit. Nullam consectetur, tortor ut maximus sodales, mi sem porttitor sapien, et pretium erat elit nec lacus. Vestibulum lobortis justo a suscipit egestas. Integer lobortis feugiat malesuada. Etiam ac tincidunt turpis. Donec faucibus justo in erat mattis, nec varius tortor egestas. Nulla pharetra, nunc dapibus porta tempor, ligula elit pharetra eros, non porttitor leo augue et odio.
+
+Suspendisse laoreet venenatis lorem, non sollicitudin mi molestie nec. Sed id nulla non ipsum scelerisque condimentum et non enim. Donec laoreet libero neque, nec bibendum lorem ultrices a. Nunc id laoreet augue, eget porttitor velit. In est risus, aliquet sit amet orci eget, maximus lacinia enim. Nulla congue massa rhoncus ante tempus lacinia. Nunc euismod lacus non erat varius, at tempor lectus porta.
+
+Duis eu imperdiet turpis, vel vestibulum diam. Pellentesque vitae congue orci. Donec egestas at diam id hendrerit. Duis at egestas arcu. Curabitur velit mi, consequat sodales justo mattis, vulputate porta turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec lacus nisi, vehicula at maximus a, suscipit ac dolor. Aenean efficitur nunc sollicitudin enim cursus, eu imperdiet ex elementum. Ut dictum et massa in ullamcorper. Cras consequat eu arcu ac sagittis. Praesent gravida convallis nibh, quis interdum tellus scelerisque a. Quisque ac enim et orci pulvinar egestas. Phasellus elementum, mi nec lobortis tristique, turpis massa pretium erat, feugiat viverra nunc nisi in leo. Nunc tempor risus urna, eu volutpat ligula efficitur non. Nullam sed lorem consectetur enim gravida condimentum. Duis consectetur, ex sit amet viverra rhoncus, diam mi imperdiet nulla, sed gravida dolor augue vel est.
+
+Duis placerat urna quis lacinia dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis accumsan erat sit amet aliquet. Integer mi magna, gravida in euismod sit amet, tincidunt lacinia massa. Proin tristique sit amet sapien eu imperdiet. Vestibulum quis pulvinar ligula. Curabitur bibendum ante eu lectus elementum imperdiet. Suspendisse venenatis facilisis bibendum. Cras consectetur scelerisque ullamcorper.
+
+Nulla et odio in dolor tempus maximus non non arcu. Sed tempus purus vitae elementum euismod. Duis nulla ex, condimentum quis ullamcorper in, posuere in orci. Morbi eu magna turpis. Nulla aliquam ac arcu vitae laoreet. Etiam eget turpis auctor, blandit ligula eu, eleifend ante. Vivamus egestas id urna id luctus. Phasellus elit ipsum, maximus eget pretium molestie, vestibulum id arcu. Nullam tristique dolor hendrerit blandit tincidunt. Aliquam sodales nulla justo, in pharetra libero convallis ut. Phasellus et sodales ante, at viverra eros. Ut blandit sodales sem non rhoncus. Suspendisse non ligula sed augue consectetur interdum. Morbi sollicitudin semper eleifend.
+
+Praesent porttitor orci erat, nec ultricies est finibus ut. Donec nulla odio, lacinia ut tempor sed, cursus interdum sapien. Nulla at augue vitae metus pulvinar mattis in sed orci. Nulla nisl arcu, aliquam eget ullamcorper vel, posuere vitae est. Quisque viverra a lorem quis consequat. Cras sed nunc eu nulla tempor scelerisque. Nunc mollis lorem odio, sed efficitur massa facilisis id. Sed sodales, nisi sit amet ornare molestie, diam arcu lobortis lacus, eu vestibulum risus nulla vel dolor. Sed fringilla erat lacus, volutpat lacinia nisi efficitur vitae. Donec ullamcorper, justo sed porttitor gravida, justo elit vestibulum neque, eu efficitur metus nulla pretium ligula. Donec id vestibulum mauris.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REAR MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{jfm2}
+\bibliography{bibliography}
+
+\appendix
+
+\chapter{This is an appendix.}
+This is an example of an appendix.
+
+
+
+\end{document}
+
