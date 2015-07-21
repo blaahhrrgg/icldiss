@@ -8,7 +8,8 @@ These documents should provide a template that fulfills the layout requirements 
 This is a modified and updated version of numerous other templates I have found on the internet. Most notably the template "icldt" created by Daniel Wagner ([www.PrettyPrinting.net](www.PrettyPrinting.net)) circa 2008 provided free of charge under a MIT license and the template "ICMathsThesis" template provided by Nigel Lawrence et. al. on the Department of Mathematics website. The bibliography style file "jfm2.bst" by Stefan Llewellyn Smith is also included to make a nice looking, Journal of Fluids Mechanics style, bibliography.
 
 This version arose from some changes in the layout requirements and my desire to change certain aesthetic elements. Some changes include:
-*changed layout of title page and use of smallcaps (\sc)
+
+* changed layout of title page and use of smallcaps (\sc)
 * use of the package fancyhdr to add header and footer
 * alteration of some package options
 * using the jfm2.bst to style the bibliography
