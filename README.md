@@ -37,3 +37,8 @@ Once compiled, examine the resulting document and then start typing/editing away
 * I always found [Detexify](http://detexify.kirelabs.org/classify.html) a great tool to find LaTeX symbols I could not remember.
 * Use \input{section1.tex} to make your dissertation modular and easier to manage. See [here](https://en.wikibooks.org/wiki/LaTeX/Modular_Documents) for more information.
 * Using tikz and pgfplots is a great way of getting great looking figures. See [here](http://www.howtotex.com/packages/beautiful-matlab-figures-in-latex/) for more information. If you have a lot of tikz images then you should compile with the option `-shell-escape'.
+* One way to perform a quick wordcount you can convert the .pdf file to .ps using the command `pdftops Thesis.pdf` and then convert to ascii and perform the word count using the command `ps2ascii Thesis.ps | wc -c`.
+
+## License
+
+Note that the license is The MIT License (MIT). See the file 'LICENSE' for more information.
